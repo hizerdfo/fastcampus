@@ -1,6 +1,9 @@
 package org.example;
 
+import org.example.calculate.Calculator;
+import org.example.calculate.PositiveNumver;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -8,6 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class CalculatorTest {
@@ -17,7 +21,7 @@ public class CalculatorTest {
     @ParameterizedTest
     @MethodSource("formulaAndResult")
     void calculateTest(int operand1, String operator, int operand2, int result){
-        int calculateResult = Calculator.calculate(operand1, operator, operand2);
+        int calculateResult = Calculator.calculate(new PositiveNumver(operand1), operator, new PositiveNumver(operand2));
 
         assertThat(calculateResult).isEqualTo(result);
     }
@@ -30,4 +34,5 @@ public class CalculatorTest {
                 arguments(4,"/",2,2)
         );
     }
+
 }
