@@ -1,12 +1,9 @@
-package org.example;
+package org.example.practice1;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
     @DisplayName("패스워드 초기화 여부를 판단한다.")

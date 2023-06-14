@@ -1,6 +1,4 @@
-package org.example.calculate;
-
-import java.nio.channels.IllegalChannelGroupException;
+package org.example.practice1.calculate;
 
 public class DivisionOperator implements NewArithmeticOperator{
     @Override

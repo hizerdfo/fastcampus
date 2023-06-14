@@ -1,4 +1,4 @@
-package org.example.calculate;
+package org.example.practice1.calculate;
 
 public class PositiveNumver {
     private final int value;
